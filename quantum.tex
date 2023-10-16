@@ -331,5 +331,121 @@ From a formal point of view the potential energy U of the particle is infinite o
 the box, while U is a constant—say 0 for convenience—on the inside (Fig. 5.4). Because
 the particle cannot have an infinite amount of energy, it cannot exist outside the box,
 and so its wave function $\psi$ is 0 for $x\le0$ and $x\ge L$. Our task is to find what $\psi$ is
-within the box, namely, between x = 0 and x = L.
+within the box, namely, between x = 0 and x = L.\vspace{10pt}
+\\
+Particle In A Box
+\begin{equation}
+    E_n=\frac{n^2\pi^2\hbar^2}{2mL^2}  
+\end{equation}
+{n=1,2,3...}\vspace{10pt}
+\\
+Wave Function of a particle in a Box
+\begin{equation}
+    \psi_n=Asin\frac{\sqrt[]{2mE_n}}{\hbar}x
+\end{equation}
+\\
+To normalize $\psi$ we must assign a value to A such that $|\psi_n|^2dx$ is equal to the probability $Pdx$ of finding the particle between $x$ and $x+dx$, rather than merely proportional to P dx.\vspace{10pt}
+\\
+Normalized Wave Function of a particle in a box
+\begin{equation}
+    \psi_n=\sqrt[]{\frac{2}{L}} \sin\frac{n\pi x}{L}
+\end{equation} 
+\\
+n=1,2,3...
+
+\subsection*{Momentum}
+
+Momentum EigenValues for trapped particle
+
+\begin{equation}
+    p_n=\pm\sqrt[]{2mE_n}=\pm\frac{n\pi\hbar}{L}
+\end{equation}
+\\
+Momentum EigenFunctions for trapped particle
+
+
+\begin{equation}
+    \psi_n^+=\frac{1}{2i}\sqrt[]{\frac{2}{L}}e^{in\pi x/L}
+\end{equation}
+
+\begin{equation}
+    \psi_n^-=\frac{1}{2i}\sqrt[]{\frac{2}{L}}e^{-in\pi x/L}
+\end{equation}
+\\
+We conclude that $\psi_n^+$ and $\psi_n^-$ are indeed the momentum eigenfunctions for a particle in a box, and that Eq. (41) correctly states the corresponding momentum
+eigenvalues.
+
+\section*{Finite Potential Well}
+
+Potential energies are never infinite in the real world, and the box with infinitely hard
+walls of the previous section has no physical counterpart. However, potential wells
+with barriers of finite height certainly do exist. Let us see what the wave functions and
+energy levels of a particle in such a well are.
+Figure 5.7 shows a potential well with square corners that is U high and L wide
+and contains a particle whose energy E is less than U. According to classical
+mechanics, when the particle strikes the sides of the well, it bounces off without
+entering regions I and III. In quantum mechanics, the particle also bounces back
+and forth, but now it has a certain probability of penetrating into regions I and III
+even though $E<U$.
+In regions I and III Schrödinger’s steady-state equation is
+
+\begin{equation}
+    \frac{d^2\psi}{dx^2}+\frac{2m}{\hbar^2}(E-U)\psi=0
+\end{equation}
+\\
+which we can rewrite in the more convenient form
+\begin{equation}
+    \frac{d^2\psi}{dx^2}-a^2\psi=0
+\end{equation}
+\\
+where 
+\begin{equation}
+    a=\frac{\sqrt[]{2m(U-E)}}{\hbar}
+\end{equation}
+\\
+Solution to equation(51) are real exponentials:
+\begin{equation}
+    \psi_I=Ce^{ax}+De^{-ax}
+\end{equation}
+\begin{equation}
+    \psi_{III}=Fe^{ax}+Ge^{-ax}
+\end{equation}
+\\
+Again the solution is:
+\begin{equation}
+    \psi_{II}=A\sin\frac{\sqrt[]{2mE}}{\hbar}x+B\cos\frac{\sqrt[]{2mE}}{\hbar}x
+\end{equation}
+\\
+For either solution both $\psi$ and $d\psi/dx$ must be continuous at x=0
+
+\section*{Tunnel Effect}
+
+It states that a particle without the energy to pass over a potential barrier may still
+tunnel through it.
+\\
+the particle has a certain probability—not necessarily great, but not zero either—of passing through the barrier and emerging
+on the other side.\vspace*{5pt}
+\\ 
+The tunnel effect actually occurs, notably in the case of the alpha particles emitted by certain radioactive nuclei. An alpha particle whose
+kinetic energy is only a few MeV is able to escape from a nucleus whose potential wall
+is perhaps 25 MeV high. The probability of escape is so small that the alpha particle
+might have to strike the wall $10^{38}$ or more times before it emerges, but sooner or later
+it does get out. Tunneling also occurs in the operation of certain semiconductor diodes in which electrons pass through potential barriers even though their kinetic
+energies are smaller than the barrier heights.\vspace{15pt}
+\\
+The wave function $\psi_{I+}$ represents the incoming particles moving to the
+right and $\psi_{I-}$ represents the reflected particles moving to the left; $\psi_{III}$ represents the transmitted particles moving to the right. The wave function $\psi_{II}$ represents the particles inside the barrier, some of which end up in region III while the others return to
+region I. 
+
+\subsection*{Approximation transmission probability}
+\begin{equation}
+    T=e^{-2k_2 L}
+\end{equation}
+\\
+where
+\begin{equation}
+    k_2=\frac{\sqrt[]{2m(U-E)}}{\hbar}
+\end{equation}
+\\
+and L is the width of the barrier.
 \end{document}
