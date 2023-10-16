@@ -1,0 +1,144 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Quantum Mechanics}
+\author{Nikhil Simon Toppo (IMH/10021/22)}
+\date{}
+\begin{document}
+\maketitle
+
+\newpage
+
+\section*{Introduction}
+
+An understanding of how individual atoms interact with one another to endow macroscopic aggregates of matter with the
+physical and chemical properties we observe.
+A more general approach to atomic phenomena
+is required. Such an approach was developed in 1925 and 1926 by Erwin Schrödinger,
+Werner Heisenberg, Max Born, Paul Dirac, and others under the apt name of quantum
+mechanics. 
+
+\section{Quantum Mechanics}
+In classical mechanics, the future history of a particle is completely determined by its initial position and momentum together with the
+forces that act upon it. Quantum mechanics also arrives at relationships between observable quantities, but
+the uncertainty principle suggests that the nature of an observable quantity is different in the atomic realm. Cause and effect are still related in quantum mechanics, but
+what they concern needs careful interpretation. In quantum mechanics the kind of certainty about the future characteristic of classical mechanics is impossible because the
+initial state of a particle cannot be established with sufficient accuracy. The quantities whose relationships quantum mechanics explores are probabilities.
+
+
+\subsection{Wave Function} 
+
+The quantity with which quantum mechanics is concerned is the wave function $\psi$ of a body. While $\psi$ itself has no physical interpretation, the
+square of its absolute magnitude $|\psi|^2$ 
+evaluated at a particular place at a particular time
+is proportional to the probability of finding the body there at that time.\vspace{10pt}
+Wave functions are usually complex with both real and imaginary parts. A probability, however, must be a positive real quantity. The probability density $|\psi|^2$
+for a complex $|\psi|^2$ is therefore taken as the product $\psi*\psi$ of $\psi$ and its complex conjugate $\psi*$. 
+
+\subsection*{Wave Function}
+
+\begin{equation}
+    \psi=A+iB
+\end{equation}
+
+\subsection*{Complex conjugate}
+
+\begin{equation}
+    \psi=A-iB
+\end{equation}
+
+and so \begin{equation}
+    |\psi|^2=\psi*\psi=A^2-i^2B^2=A^2+B^2
+\end{equation}
+
+since $i^2=-1$. Hence $|\psi|^2==\psi*\psi$ is always a positive real quantity.
+
+\subsection*{Normalization}
+
+$|\psi|^2$ is proportional to the probability density P of finding the body described by $\psi$, the integral of $|\psi|^2$ over all space must be finite—the body is somewhere, after all. If
+
+\begin{equation}
+    \int_{-\infty}^{\infty}|\psi|^2dv=0
+\end{equation}
+the particle doesn't exist.
+\vspace{10pt}
+\\
+If
+
+\begin{equation}
+    \int_{-\infty}^{\infty}|\psi|^2dv=1
+\end{equation}
+
+since if the particle exists somewhere at all times,
+\begin{equation}
+    \int_{-\infty}^{\infty}Pdv=1
+\end{equation}
+
+A wave function that obeys Eq.(5) is said to be normalized. Every acceptable wave function must be normalized by multiplying it by an appropriate constant.
+
+\subsection*{Well-Behaved Wave Functions}
+$\psi$ must be single-valued. $\delta\psi/\delta x$,$\delta\psi/\delta y$,$\delta\psi/\delta z$ be infinite, continious and single-valued. To summarize:
+
+\begin{enumerate}
+    \item $\psi$ must be continous and single-valued everywhere.
+    \item $\delta\psi/\delta x$,$\delta\psi/\delta y$,$\delta\psi/\delta z$ must be continous and single-valued everywhere.
+    \item $\psi$ must be normizable, which means that $\psi$ must go to 0 as x--$>$$\pm\infty$, y--$>$ $\pm\infty$, z--$>$ $\pm\infty$ in order that $\int |\psi|^2 dV$ over all space be finite constant.
+    
+
+\end{enumerate}
+
+
+
+For a particle restricted to motion in the x direction, the probability of finding it between $x_1$ and $x_2$ is given by
+
+\subsection{Probability}
+
+\begin{equation}
+    P_{{x1}{x2}}=\int_{x1}^{x2}|\psi|^2dx
+\end{equation}
+
+\subsection{Wave Equation}
+
+\begin{equation}
+    \frac{\delta^2y}{\delta x^2}=\frac{1}{v^2}\frac{\delta^2y}{\delta t^2}
+\end{equation}
+
+All solutions must be of the form
+
+\begin{equation}
+    y=F(t\pm\frac{x}{v})
+\end{equation}
+
+Solution of equation (8) can be expressed as 
+
+\begin{equation}
+    y=Acos\omega(t-\frac{x}{v})-iAsin\omega(t-\frac{x}{v})
+\end{equation}
+
+
+\section{Schrodinger Equation: Time-Independent Form}  
+
+In quantum mechanics the wave function, $\psi$ corresponds to the wave variable y of wave function in general.
+
+\subsection*{Free Particle}
+\begin{equation}
+    \psi=Ae^{i(kx-\omega t)}
+\end{equation}
+\\
+Equation(11) describes the wave equivalent of an unrestricted particle of total energy E and momentum p moving in the +x direction.
+
+
+
+\end{document}
