@@ -1,5 +1,5 @@
 \documentclass{article}
-
+\usepackage{physics}
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
 \usepackage[english]{babel}
@@ -137,8 +137,199 @@ In quantum mechanics the wave function, $\psi$ corresponds to the wave variable 
     \psi=Ae^{i(kx-\omega t)}
 \end{equation}
 \\
-Equation(11) describes the wave equivalent of an unrestricted particle of total energy E and momentum p moving in the +x direction.
+Equation(11) describes the wave equivalent of an unrestricted particle of total energy E and momentum p moving in the +x direction. We are most interested in situations where the motion of
+a particle is subject to various restrictions. An important concern, for example, is an
+electron bound to an atom by the electric field of its nucleus. This equation, which is Schrödinger’s equation, can be arrived
+at in various ways, but it cannot be rigorously derived from existing physical principles: The equation represents something new.
+
+\subsection*{Time-dependent Schrodinger equation in one dimension}
+
+\begin{equation}
+    i\hbar \frac{\delta\psi}{\delta t}= -\frac{\hbar^2}{2m}\frac{\delta^2\psi}{\delta x^2}+U\psi
+\end{equation}
+\\
+U is some function of x,y,z and t.\vspace{10pt}
+\\
+Schrodinger equation cannot be derived from other basic principles of physics; it is a basic principle in itself.\vspace{10pt}
+\\
+Newton's second law of motion $F = ma$, the basic principle of classical mechanics, can be derived from
+Schrödinger's equation provided the quantities it relates are understood to be averages
+rather than precise values. (Newton's laws of motion were also not derived from any
+other principles. Like Schrödinger's equation, these laws are considered valid in their
+range of applicability because of their agreement with experiment.)
+
+\subsection*{Linearity And Superposition}
+Wave functions add, not probabilities
+\\
+If $\psi_1$ and $\psi_2$ are two solutions(that is, two wave functions that satisfy the equation), then
+
+\begin{equation}
+    \psi=a_1\psi_1+a_2\psi_2
+\end{equation}
+
+\begin{equation}
+    P_1=|\psi_1|^2=\psi_1*\psi_2
+\end{equation}
+
+\begin{equation}
+    P_2=|\psi_2|^2=\psi_2*\psi_2
+\end{equation}
+
+\begin{equation}
+    \psi=\psi_1+\psi_2
+\end{equation}
+
+Probability Density at the screen:
+
+\begin{equation}
+    P=|\psi|^2=|\psi_1+\psi_2|^2=(\psi_1^*+\psi_2^*)(\psi_1+\psi_2)
+\end{equation}
+
+\begin{equation}
+    =\psi_1^*\psi_1+\psi_2^*\psi_2+\psi_1^*\psi_2+\psi_2^*\psi_1
+\end{equation}
+
+\begin{equation}
+    =P_1+P_2+\psi_1^*\psi_2+\psi_2^*\psi_1
+\end{equation}
+
+\section{Expectation Value}
+
+Once Schrödinger’s equation has been solved for a particle in a given physical situation, the resulting wave function $\psi$(x, y, z, t) contains all the information about the
+particle that is permitted by the uncertainty principle. Expectation values$<x>$ of the position of a
+particle confined to the $x$ axis that is described by the wave function $\psi$(x, t).\vspace{6pt}
+\\
+The probablity is
+
+\begin{equation}
+    P_i=|\psi|^2dx
+\end{equation}
+\\
+Expectation Value of the position of the single particle is
+
+\begin{equation}
+    <x>=\frac{\int_{-\infty}^{\infty} x|\psi|^2dx }{\int_{-\infty}^{\infty} |\psi|^2dx }
+\end{equation}
+\\
+If $\psi$ is a normalized wave function, the denominator of Eq. (5.18) equals the probability that the particle exists somewhere between x=$-\infty$ and x=$\infty$ and therefore
+has the value 1.
+
+\begin{equation}
+    <x>=\int_{-\infty}^{\infty} x|\psi|^2dx 
+\end{equation}
+
+Expectation value of Potential Energy$(G(x))$
+
+\begin{equation}
+    <G(x)>=\int_{-\infty}^{\infty}G(x)|\psi|^2dx 
+\end{equation}
+
+The expectation value $<p>$ for momentum cannot be calculated this way.
+
+\section{Operators}
+\begin{equation}
+    E\psi=i\hbar\frac{\delta\psi}{\delta t}
+\end{equation}
+\\
+An operator tells us what operation to carry out on the quantity that follows it.
+\\
+Equation (24) was on the postmark
+used to cancel the Austrian postage stamp issued to commemorate the 100th
+anniversary of Schrödinger’s birth.
+It is customary to denote operators by using a caret, so that $\vu*{p}$ is the operator that
+corresponds to momentum p and $\vu*{E}$ is the operator that corresponds to total energy E.
+
+\subsection*{Momentum Operator}
+\begin{equation}
+    \vu*{p}=\frac{\hbar}{i}\frac{\delta}{\delta x}
+\end{equation}
+
+\subsection*{Total-Energy Operator}
+\begin{equation}
+    \vu*{E}=i\hbar\frac{\delta}{\delta t}
+\end{equation} \vspace*{20pt}
+\\
+To support the validity of operator equation. The equation $E=KE+U$ for total energy of a particle can be replaced by with the operator equation
+
+\begin{equation}
+    \vu*{E}=\vu*{KE}+\vu*{U}
+\end{equation}
+
+\begin{equation}
+    \vu*{KE}=\frac{\vu*{p^2}}{2m}=\frac{1}{2m}(\frac{\hbar}{i}\frac{\delta^2\psi}{\delta x^2})^2=-\frac{\hbar^2}{2m}\frac{\delta^2}{\delta x^2}
+\end{equation}
+\\
+Putting value of Equation (28) in Equation (27) and multiplying be $\psi$, we get 
+
+\begin{equation}
+    i\hbar \frac{\delta \psi}{\delta t}=-\frac{\hbar^2}{2m}\frac{\delta^2\psi}{\delta x^2}+U\psi
+\end{equation}
+\\
+which is Schrödinger’s equation.
 
 
+\subsection*{Operators $\&$ Expectation Values}
 
+Expectation Value for p
+\begin{equation}
+    <p>=\int_{-\infty}^{\infty}\psi^*\vu*{p}\psi dx=\int_{-\infty}^{\infty}\psi^*(\frac{\hbar}{i}\frac{\delta}{\delta x})\psi dx=\frac{\hbar}{i}\int_{-\infty}^{\infty}\psi^*\frac{\delta \psi}{\delta x}dx    
+\end{equation}
+\\
+and the expectation value for E
+\begin{equation}
+    <p>=\int_{}^{\infty}\psi^*\vu*{E}\psi dx=\int_{}^{\infty}\psi^*(i\hbar\frac{\delta}{\delta t})\psi dx=i\hbar\int_{}^{\infty}\psi^*\frac{\delta \psi}{\delta x}dx 
+\end{equation}
+
+\subsection*{Expectation Value of an Operator}
+
+\begin{equation}
+    <G(x,p)>=\int_{-\infty}^{\infty}\psi^*\vu*{G}    
+\end{equation}
+
+\section*{Schrödinger’s Equation: Steady-State Form}
+One-dimensional wave function $\psi$ of an unrestricted particle may be written  
+\begin{equation}
+    \psi=Ae^{-(i/h)(Et-px)}=Ae^{(iE/h)t}e^{+(ip/\hbar)x}=\psi e^{-(iE/\hbar)t}
+\end{equation}
+\\
+Steady-State form of Schrödinger's equation
+\begin{equation}
+    \frac{\delta^2 \psi}{\delta x^2}+\frac{2m}{\hbar}(E-U)\psi=0
+\end{equation}
+
+\subsection*{Eigenvalues and Eigenvalues}
+The values of energy En for which Schrödinger's steady-state equation can be solved are called eigenvalues and the corresponding wave functions $\psi_n$ are called eigenfunctions. \vspace{20pt}
+\\
+Eigenvalue Equation
+\begin{equation}
+    \vu*{G}\psi_n=G_n\psi_n
+\end{equation}
+
+\subsection*{Hamilton Operator}
+\begin{equation}
+    \vu*{H}=-\frac{\hbar^2}{2m}\frac{\delta^2}{\delta x^2}+U
+\end{equation}
+and is called the Hamiltonian operator because it is reminiscent of the Hamiltonian
+function in advanced classical mechanics, which is an expression for the total energy
+of a system in terms of coordinates and momenta only. Evidently the steady-state
+Schrödinger equation can be written simply as
+\subsection*{Schrödinger's equation}
+\begin{equation}
+    \vu*{H}\psi_n=E_n\psi_n
+\end{equation}
+
+\break
+
+\section*{Particle In A Box}
+To solve Schrödinger's equation, even in its simpler steady-state form, usually requires elaborate mathematical techniques.Quantum mechanics is the theoretical structure
+whose results are closest to experimental reality, we must explore its methods and applications to understand modern physics.\vspace{4pt}
+\\
+The simplest quantum-mechanical problem is that of a particle trapped in a box
+with infinitely hard walls.
+\\
+From a formal point of view the potential energy U of the particle is infinite on both sides of
+the box, while U is a constant—say 0 for convenience—on the inside (Fig. 5.4). Because
+the particle cannot have an infinite amount of energy, it cannot exist outside the box,
+and so its wave function $\psi$ is 0 for $x\le0$ and $x\ge L$. Our task is to find what $\psi$ is
+within the box, namely, between x = 0 and x = L.
 \end{document}
